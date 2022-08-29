@@ -1,7 +1,7 @@
-public class FlightBookingService {
+public class FlightBookingService implements BookingService{
     private int bookingsCount;
 
-    public void bookFlight(int id, Customer customer){
+    public void book(int id, Customer customer){
         System.out.println("Бронь №" + id + ": " + customer.getFullName());
         bookingsCount++;
     }
@@ -15,7 +15,7 @@ public class FlightBookingService {
         }
     }
 
-    public int getCurrentBookingsCount(){
+    public int getBookingsCount(){
         return bookingsCount;
     }
 }
